@@ -4,13 +4,13 @@
 
 - **URLS :**
 
-  - **Website : [Steps](https://steps.netlify.app)**
+  - **Website : [Steps](https://dgt-steps.netlify.app)**
 
 ---
 
 - **STACK :**
 
-  - **Steps** : `0.1.0`
+  - **Steps** : `0.2.0`
   - **React** : `18.3.1`
   - **React Dom** : `18.3.1`
 

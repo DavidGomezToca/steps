@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+const messages = [
+  "Fill a watering can with water",
+  "Water the plants",
+  "Store the watering can",
+];
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+  let step = 1;
+
+  return <>
+    <div className="steps">
+      <div className="numbers">
+        <div className={`${step >= 1 ? "active" : ""}`}>1</div>
+        <div className={`${step >= 2 ? "active" : ""}`}>2</div>
+        <div className={`${step >= 3 ? "active" : ""}`}>3</div>
+      </div>
+      <p className="message">Step {step}: {messages[step - 1]}</p>
+      <div className="buttons">
+        <button>Previous</button>
+        <button>Next</button>
+      </div>
+    </div >
+    <VerisonWatermark />
+  </>
 }
 
-export default App;
+function VerisonWatermark() {
+  const version = require('../package.json').version;
+
+  return (
+    <div className="versionWatermark">{version}</div>
+  );
+}
