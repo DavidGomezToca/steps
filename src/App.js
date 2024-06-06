@@ -7,6 +7,9 @@ const messages = [
 export default function App() {
   let step = 1;
 
+  function handlePrevious() { alert("Previous") };
+  function handleNext() { alert("Next") };
+
   return <>
     <div className="steps">
       <div className="numbers">
@@ -16,8 +19,8 @@ export default function App() {
       </div>
       <p className="message">Step {step}: {messages[step - 1]}</p>
       <div className="buttons">
-        <button>Previous</button>
-        <button>Next</button>
+        <button onClick={handlePrevious}>Previous</button>
+        <button onClick={handleNext}>Next</button>
       </div>
     </div >
     <VerisonWatermark />
