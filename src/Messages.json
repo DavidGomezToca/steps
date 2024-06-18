@@ -1,0 +1,16 @@
+{
+  "messages": [
+    {
+      "id": 0,
+      "text": "Fill a watering can with water"
+    },
+    {
+      "id": 1,
+      "text": "Water the plants"
+    },
+    {
+      "id": 2,
+      "text": "Store the watering can"
+    }
+  ]
+}

@@ -2,15 +2,9 @@
 
 ![THUMBNAIL](resources/img/Thumbnail.png)
 
-- **URLS :**
-
-  - **Website : [Steps](https://dgt-steps.netlify.app)**
-
----
-
 - **STACK :**
 
-  - **Steps** : `0.6.0`
+  - **Steps** : `1.0.0`
   - **React** : `18.3.1`
   - **React Dom** : `18.3.1`
 

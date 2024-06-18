@@ -1,14 +1,13 @@
 import { useState } from 'react';
-
-const messages = [
-  "Fill a watering can with water",
-  "Water the plants",
-  "Store the watering can",
-];
+import Messages from "./Messages.json";
 
 export default function App() {
   const [step, setStep] = useState(1);
   const [isOpen, setIsOpen] = useState(true);
+  const messages = new Array(Messages.messages.length);
+  Messages.messages.forEach(element => {
+      messages[element.id] = ([element.text]);
+  });
 
   function handlePrevious() {
     if (step > 1)
@@ -30,7 +29,7 @@ export default function App() {
             <div className={step >= 2 ? "active" : ""}>2</div>
             <div className={step >= 3 ? "active" : ""}>3</div>
           </div>
-          <p className="message">Step {step}: {messages[step - 1]}</p>
+          <p className="message">Step {step}: {messages[step - 1][0]}</p>
           <div className="buttons">
             <button onClick={handlePrevious}>Previous</button>
             <button onClick={handleNext}>Next</button>
